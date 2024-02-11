@@ -1,65 +1,31 @@
-//import 'dart:io';
-
 import 'package:flutter/material.dart';
-void main() {
-  runApp(const MyApp());
+// import 'package:final_beta/index.dart';
+
+class LoginPage extends StatefulWidget {
+  static const String routeName = '/login';
+
+  @override
+  _LoginPageState createState() => _LoginPageState();
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'final_beta',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Final Beta'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-
-  @override
-  Widget build(BuildContext context) {
-    
     return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  labelText: 'First Name',
-                  hintText: 'Enter your first name',
-                  border: OutlineInputBorder(),
-                ),
-                keyboardType: TextInputType.name,
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  labelText: 'Last Name',
-                  hintText: 'Enter your last name',
-                  border: OutlineInputBorder()
-                ),
-                keyboardType: TextInputType.name,
+            const Text(
+              '''
+                STRESS
+                FREE.
+              ''',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 34,
+                color: Colors.purple,
               ),
             ),
             const Padding(
@@ -86,18 +52,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 obscureText: true,
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  labelText: 'Confirm Password',
-                  hintText: 'Enter your password again',
-                  border: OutlineInputBorder(),
-                ),
-                keyboardType: TextInputType.text,
-                obscureText: true,
-              ),
-            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextButton(
@@ -111,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 child: const Text(
-                  'CREATE ACCOUNT',
+                  'LOGIN',
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
@@ -123,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const Padding(
               padding: EdgeInsets.all(8.0),
               child: Text(
-                'Already have an account? Sign In',
+                'Don\' have an account yet? Sign Up',
                 style: TextStyle(
                   decoration: TextDecoration.underline,
                   decorationColor: Colors.blue,
