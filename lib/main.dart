@@ -106,6 +106,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: null,
                 style: TextButton.styleFrom(
                   backgroundColor: Colors.green,
+                  fixedSize: const Size(1034.0, 56.0),
+                  shape: const BeveledRectangleBorder(
+                    side: BorderSide.none,
+                    borderRadius: BorderRadius.all(Radius.circular(2.0)),
+                  ),
                 ),
                 child: const Text(
                   'CREATE ACCOUNT',
